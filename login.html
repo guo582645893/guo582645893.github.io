@@ -1,0 +1,134 @@
+<!DOCTYPE html><html>
+<head>
+<title>郭雨璇</title>
+
+<!-- 页面基本设置禁止随意更改 -->
+<meta charset="utf-8">
+<meta name="author" content="forework">
+<meta name="format-detection" content="telephone=no">
+<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="msapplication-tap-highlight" content="no">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<!-- 页面基本设置禁止随意更改 -->
+<!-- 基础CSS类库可随意更改 -->
+<link rel="stylesheet" type="text/css" href="css/less.css">
+<link rel="stylesheet" type="text/css" href="css/basic.css">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<!-- 基础js类库可随意更改 -->
+</head>
+<body>
+<div class="wrapper" style="background-color: white;">
+  <div class="login-top">
+ <!--  <div style="height: 60px;background-color: white;">
+	<div style=";margin-left: 160px;">
+		<img src="images/2.png" style="width:250px;height:100px;margin-top:-10px" />	
+	</div>
+	<div style="float:right;margin-top: -34px;width: 360px;font-size: 12px;">
+		<span>返回首页</span>
+		<span>|</span>
+		<span>登录帮助</span>
+		<span>|</span>
+		<span>在线答疑</span>
+	</div>
+  </div> -->
+     
+    <div class="login-topBg">
+      <div class="login-topBg1">
+        
+        <div class="login-topStyle" >
+          
+          <!--在点击注册时出现样式login-topStyle3登录框，而login-topStyle2则消失-->
+          <div class="login-topStyle3" id="loginStyle" style="margin-top: 75px;">
+            <h3>郭雨璇登录</h3>
+            <!--输入错误提示信息，默认是隐藏的，把display:none，变成block可看到-->
+            <div class="error-information" style="display:none;">您输入的密码不正确，请重新输入</div>
+            <div class="ui-form-item loginUsername">
+              <input type="username" placeholder="用户名" class="username">
+            </div>
+            <div class="ui-form-item loginPassword"> 
+              <input type="password" placeholder="请输入密码" class="password">
+            </div>
+            <!-- <div class="login_reme">
+              <input type="checkbox">
+              <a class="reme1">记住账号</a> <a class="reme2" href="">忘记密码?</a> </div> -->
+            <span class="error_xinxi" style="display:none;">您输入的密码不正确，请重新输入</span> <a class="btnStyle btn-register"  id="login"> 立即登录</a> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="loginCen" style="margin-top: 55px;">
+    <div class="login-center">
+      <div class="loginCenter-moudle">
+        <div class="loginCenter-moudleLeft" style="margin-right: 60px;"> &nbsp;</div>
+        <div class="loginCenter-moudleRight" style="  width: 1067px;"> 
+          <!--第一个--> 
+          <a class="loginCenter-mStyle loginCenter-moudle1" id="moudleRemove" style=" display:block;width: 340px;">
+           <span class="moudle-img"><img src="images/2.jpg" style="width:88;height:88px;border-radius: 50%;" class="music" onMouseOver="javascript:play_over();" id="change"></span>
+            <span class="moudle-text"> 
+            <span class="moudle-text1" style="font-family:'微软雅黑'">郭雨璇与父母见面
+</span> 
+            <span class="moudle-text2" style="font-family:'微软雅黑'">Guo Yuxuan meets her parents.</span> 
+            </span>
+             </a> 
+           <!--第二个--> 
+          <a class="loginCenter-mStyle loginCenter-moudle2" style=" display:block; width: 357px;" id="moudleRemove2" > 
+          <span class="moudle-img"><img src="images/4.jpg" style="width:88px;height:88px;border-radius:50%;" class="music" onMouseOver="javascript:play_over();" id="change"></span> 
+           <span class="moudle-text">
+            <span class="moudle-text1" style="font-family:'微软雅黑'"> 郭雨璇健康成长
+</span>
+            <span class="moudle-text2" style="font-family:'微软雅黑'">Guo Yuxuan healthy growth</span> 
+           </span>
+             </a> 
+            <!--第三个--> 
+                 <a class="loginCenter-mStyle loginCenter-moudle3" style=" display:block;" id="moudleRemove3" > 
+                 <span class="moudle-img"><img src="images/5.jpg" style="width:88px;height:88px;border-radius:50%;" class="music" onMouseOver="javascript:play_over();" id="change"></span> 
+                   <span class="moudle-text"> 
+                 <span class="moudle-text"> <span class="moudle-text1" style="font-family:'微软雅黑'">郭雨璇奇妙世界
+</span>
+                  <span class="moudle-text2" style="font-family:'微软雅黑'">Guo Yuxuan wonders of the world</span>
+            </span>
+            </span>
+                    </a> 
+         
+             </div>
+      </div>
+    </div>
+    <div id='div1'></div>
+  </div>
+  <div class="footer"> <span class="footerText">Copyright @ 2015-2016 guoyingjie for baby  2016-7-3</span> </div>
+</div>
+<script type="text/javascript">
+ $(function(){
+ 	 
+ 	$('#login').click(function(){
+
+ 		if($('.username').val()==""){
+ 			$('.error-information').text("请输入账号");
+ 			$('.error-information').css('display','block');
+
+ 			return;
+ 		}
+ 		if($('.password').val()==""){
+ 			$('.error-information').text("请输入密码");
+ 			$('.error-information').css('display','block');
+ 			return ;
+ 		}
+ 		if($('.username').val()!='郭雨璇'&&$('.password').val()!='123456'){
+			$('.error-information').text("账号或者密码错误");
+ 			$('.error-information').css('display','block');
+ 			return;
+ 		}
+    window.location.href="index.html";
+ 	});
+ });
+	function play_over(){
+	    var div = document.getElementById('div1');
+	    div.innerHTML = "<embed src='css/son.mp3' loop='0' autostart='true' hidden='true'></embed>";
+    }
+ 
+</script>
+</body>
+</html>
